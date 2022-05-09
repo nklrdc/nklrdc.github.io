@@ -1,0 +1,201 @@
+@font-face{
+    font-family: "main";
+    src: url("Roboto-Thin.ttf")
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+:root{
+    --font-size-small : 12pt;
+    --font-size-medium : 40pt;
+    --font-size-big:50pt;
+    --accent-color: #69bd45;
+    --base-color: #0e0d24;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "main";
+    font-weight: bold;
+    background-color: var(--base-color);
+    color: white;
+    letter-spacing: 0.2em;
+    overflow-x: hidden;
+    width: auto;
+}
+
+nav{
+    position: fixed;
+    top:20px;
+    left: 20px;
+    font-size: 19pt;
+}
+nav li{
+    list-style: none;
+    margin-top: 10px;
+    color: var(--accent-color);
+    cursor: pointer;
+}
+nav :nth-child(1){
+    color: white;
+}
+
+#intro{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-content: center;
+}
+
+#intro p,h1{
+    text-align: justify;
+    text-align-last: center;
+    width: 600px;
+    max-width: 75vw;
+    font-size: var(--font-size-small);
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-size: var(--font-size-big);
+    text-align: center;   
+}
+span{
+    color: var(--accent-color);
+}
+
+#arrow{
+    width: 80px;
+    position: absolute;
+    bottom: 30px;
+    margin-left: calc(50vw - 40px);
+    cursor: pointer;
+}
+
+
+.projects{
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+.project{
+    display: flex;
+    justify-content: space-around;
+    min-height: 400px;
+
+}
+.project h2{
+    font-size: 19pt;
+}
+.project-sub{
+    width: 600px;
+    min-height: 400px;
+    max-width: 100vw;
+    display: grid;
+    align-items: center;
+}
+.project-sub-short{
+    width: 600px;
+    max-width: 100vw;
+    display: grid;
+    align-items: center;
+}
+.ltr{
+    flex-wrap: wrap;
+    
+}
+.rtl{
+    flex-wrap:wrap-reverse;
+    flex-direction: row-reverse;
+}
+.project-text{
+    width: 80%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    text-align-last:left ;
+}
+.accentbtn{
+    display: block;
+    margin-top: 30px;
+    letter-spacing: 0.2em;
+    font-size: 14pt;
+    padding: 10px 20px 10px 20px ;
+    color: var(--accent-color);
+    background-color: transparent;
+    stroke: none;
+    border-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#tape{
+    width: 70%;
+    margin: auto;
+}
+
+#yugo{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 0;
+}
+#probe{
+    width: 80%;
+    margin: auto;
+}
+
+#colorblind{
+    max-width: 90%;
+    height: 300px;
+    margin: auto;
+}
+
+
+footer{
+    margin-top: 80px;
+    padding: 20px;
+    color: var(--base-color);
+    background-color: var(--accent-color);
+    width: auto;
+}
+footer img{
+    height: 35px;
+    margin-right: 20px;
+}
+
+
+#contact{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+#contact div{
+    display: inline-grid;
+    grid-auto-flow: column;
+    align-items:center; 
+    font-size: 15pt;
+}
+
+#contact div :hover{
+    cursor: pointer;
+}
+
+footer h2{
+    font-size: 22pt;
+}
+
+
+
+#copy{
+    margin-top: 60px;
+    font-size: 9pt;
+}
+
+
+
