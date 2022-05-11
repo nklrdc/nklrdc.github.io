@@ -44,6 +44,10 @@ nav li{
 .accent-nav{
     color: white;
 }
+.nav-span{
+    opacity: 1;
+    
+}
 
 #intro{
     width: 100%;
@@ -74,7 +78,7 @@ h1{
     font-size: var(--font-size-big);
     text-align: center;   
 }
-span{
+#hello{
     color: var(--accent-color);
 }
 

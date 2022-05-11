@@ -10,12 +10,12 @@
 </head>
 <body>
     <nav>
-        <li onclick = "handleNavClick(event)" id = "intronav">Intro</li>
-        <li onclick = "handleNavClick(event)" id = "projectsnav">Projects</li>
-        <li onclick = "handleNavClick(event)" id = "contactnav">Contact</li>
+        <li onclick = "handleNavClick(event)" id = "intronav">I<span class="nav-span">ntro</span></li>
+        <li onclick = "handleNavClick(event)" id = "projectsnav">P<span class="nav-span">rojects</span></li>
+        <li onclick = "handleNavClick(event)" id = "contactnav">C<span class="nav-span">ontact</span></li>
     </nav>
     <div id = "intro" class = "animate-intro">
-        <p><span>Hello</span>, my name is</p>
+        <p><span id = "hello">Hello</span>, my name is</p>
         <h1>Nikola Radić</h1>
         <p>I am an  electrical engineer appl. and an aspiring developer from Pančevo, Serbia. I love programming, videography, making games, playing music and learning new skills.</p>
         <img onclick="(function(){document.getElementById('first').scrollIntoView()})()" id="arrow" src="img/arrow.svg"/>

@@ -8,30 +8,34 @@ const end = document.getElementById("end")
 let body = document.body
 let html = document.documentElement
 let height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+let width = body.clientWidth
+console.log(width)
+//navstate[highlighted , showOnlyFirstLetter]
+let showOnlyFirstLetter = false;
 let navState = 2;
-let mobile = false;
-updateNavState(1)
+updateHighlightState(1)
 
 window.addEventListener("scroll", ()=>{
+    updateNavAppearance()
     if(window.scrollY < 600){
-        updateNavState(1)
+        updateHighlightState(1)
     }else if(window.scrollY > height - window.innerHeight - end.clientHeight){
-        updateNavState(3)      
+        updateHighlightState(3)      
     }else{
-        updateNavState(2)
+        updateHighlightState(2)
     }
     
 })
-function updateNavState(stateUpdate){
-    if(stateUpdate !== navState){
+function updateHighlightState(highlight){
+    if(highlight !== navState){
         arr[navState].className = ""
-        arr[stateUpdate].className= "accent-nav"
-        navState = stateUpdate
+        arr[highlight].className= "accent-nav"
+        navState = highlight
     }
 }
 
 function handleNavClick(event){
-    let obj = event.target.id
+    let obj = event.target.tagName === "SPAN"? event.target.parentElement.id : event.target.id
     
     switch(obj){
         case "intronav":
@@ -63,6 +67,28 @@ function handleNavClick(event){
 }
 
 
+const spans = document.getElementsByClassName("nav-span")
+function updateNavAppearance(){
+    if(!showOnlyFirstLetter && (width < 874) && (scrollY > 10)){
+        showOnlyFirstLetter = true
+        for(span of spans){
+            span.style.opacity = 0
+        }
+    }else{
+        if(showOnlyFirstLetter && (width > 874) || (scrollY < 10)){
+            for(span of spans){
+                span.style.opacity = 1
+            }
+            showOnlyFirstLetter = false
+        }
+        
+    }
+}
+
+
+
 window.addEventListener("resize" , () =>{
+    width = body.clientWidth
      height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
+     updateNavAppearance()
 })
