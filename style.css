@@ -35,6 +35,15 @@ nav{
     left: 20px;
     font-size: 19pt;
 }
+@media screen  and (max-width: 874px){
+    nav{
+    position: fixed;
+    top:20px;
+    left: auto;
+    right: 3px;
+    font-size: 19pt;
+    }
+}
 nav li{
     list-style: none;
     margin-top: 10px;

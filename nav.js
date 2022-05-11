@@ -72,12 +72,12 @@ function updateNavAppearance(){
     if(!showOnlyFirstLetter && (width < 874) && (scrollY > 10)){
         showOnlyFirstLetter = true
         for(span of spans){
-            span.style.opacity = 0
+            span.style.display = "none"
         }
     }else{
         if(showOnlyFirstLetter && (width > 874) || (scrollY < 10)){
             for(span of spans){
-                span.style.opacity = 1
+                span.style.display = "default"
             }
             showOnlyFirstLetter = false
         }
