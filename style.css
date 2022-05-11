@@ -2,6 +2,9 @@
     font-family: "main";
     src: url("Roboto-Thin.ttf")
 }
+html{
+    scroll-behavior: smooth;
+}
 body::-webkit-scrollbar {
     display: none;
   }
@@ -11,6 +14,8 @@ body::-webkit-scrollbar {
     --font-size-big:50pt;
     --accent-color: #69bd45;
     --base-color: #0e0d24;
+    --animation-state: paused;
+    --fade-name: fadeIn;
 }
 body{
     margin: 0;
@@ -36,7 +41,7 @@ nav li{
     color: var(--accent-color);
     cursor: pointer;
 }
-nav :nth-child(1){
+.accent-nav{
     color: white;
 }
 
@@ -45,6 +50,10 @@ nav :nth-child(1){
     height: 100vh;
     display: grid;
     align-content: center;
+}
+.animate-intro{
+    animation-name: var(--fade-name);
+    animation-duration: 0.5s;
 }
 
 #intro p,h1{
@@ -55,6 +64,11 @@ nav :nth-child(1){
     font-size: var(--font-size-small);
     margin-left: auto;
     margin-right: auto;
+}
+
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 h1{
     font-size: var(--font-size-big);
@@ -199,3 +213,30 @@ footer h2{
 
 
 
+
+
+
+
+#wheel1{
+    transform-origin: center;
+    transform-box:fill-box;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-play-state: var(--animation-state);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#wheel2{
+    transform-origin: center;
+    transform-box:fill-box;
+    animation-name: rotation;
+    animation-play-state: var(--animation-state);
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
