@@ -36,16 +36,7 @@ nav{
     left: 20px;
     font-size: 19pt;
 }
-@media screen  and (max-width: 874px){
-    nav{
-    text-align: var(--mobile-nav-align);
-    position: fixed;
-    top:20px;
-    left: auto;
-    right: 3px;
-    font-size: 16pt;
-    }
-}
+
 nav li{
     list-style: none;
     margin-top: 10px;
@@ -76,19 +67,31 @@ nav li{
     text-align-last: center;
     width: 600px;
     max-width: 75vw;
-    font-size: var(--font-size-small);
     margin-left: auto;
     margin-right: auto;
-}
-
-@keyframes fadeIn {
-    from{opacity: 0;}
-    to{opacity: 1;}
 }
 h1{
     font-size: var(--font-size-big);
     text-align: center;   
 }
+@media screen  and (max-width: 874px){
+    nav{
+    text-align: var(--mobile-nav-align);
+    position: fixed;
+    top:20px;
+    left: auto;
+    right: 3px;
+    font-size: 16pt;
+    }
+    h1{
+        font-size: 35px;
+    }
+}
+@keyframes fadeIn {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
 #hello{
     color: var(--accent-color);
 }
