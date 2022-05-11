@@ -73,12 +73,14 @@ function updateNavAppearance(){
         showOnlyFirstLetter = true
         for(span of spans){
             span.style.display = "none"
+            document.documentElement.style.setProperty('--mobile-nav-align' , 'center')
         }
     }else{
         if(showOnlyFirstLetter && (width > 874) || (scrollY < 10)){
             for(span of spans){
-                span.style.display = "default"
+                span.style.display = ""
             }
+            document.documentElement.style.setProperty('--mobile-nav-align' , 'right')
             showOnlyFirstLetter = false
         }
         

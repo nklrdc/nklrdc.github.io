@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
     --base-color: #0e0d24;
     --animation-state: paused;
     --fade-name: fadeIn;
+    --mobile-nav-align: left;
 }
 body{
     margin: 0;
@@ -37,6 +38,7 @@ nav{
 }
 @media screen  and (max-width: 874px){
     nav{
+    text-align: var(--mobile-nav-align);
     position: fixed;
     top:20px;
     left: auto;
