@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
     --base-color: #0e0d24;
     --animation-state: paused;
     --fade-name: fadeIn;
-    --mobile-nav-align: left;
+    --mobile-nav-align: right;
 }
 body{
     margin: 0;
@@ -43,7 +43,7 @@ nav{
     top:20px;
     left: auto;
     right: 3px;
-    font-size: 19pt;
+    font-size: 16pt;
     }
 }
 nav li{

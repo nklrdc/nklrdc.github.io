@@ -13,7 +13,9 @@ console.log(width)
 //navstate[highlighted , showOnlyFirstLetter]
 let showOnlyFirstLetter = false;
 let navState = 2;
+const spans = document.getElementsByClassName("nav-span")
 updateHighlightState(1)
+updateNavAppearance()
 
 window.addEventListener("scroll", ()=>{
     updateNavAppearance()
@@ -67,7 +69,7 @@ function handleNavClick(event){
 }
 
 
-const spans = document.getElementsByClassName("nav-span")
+
 function updateNavAppearance(){
     if(!showOnlyFirstLetter && (width < 874) && (scrollY > 10)){
         showOnlyFirstLetter = true
