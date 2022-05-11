@@ -4,7 +4,7 @@ const wheel2 = document.getElementById("wheel2")
 const play= document.getElementById("play")
 const stop= document.getElementById("stop")
 const pause= document.getElementById("pause")
-const audio = new Audio("tune.ogg")
+const audio = new Audio("tune.mp3")
 audio.loop = true
 
 
